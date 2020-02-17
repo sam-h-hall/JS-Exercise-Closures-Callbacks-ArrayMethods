@@ -88,9 +88,10 @@ function processLastItem(stringList, callback) {
  * should return 1000.
 */
 function processSum(numberList, callback) {
-  return callback(numberList);
-}
+  numberList.length < 1 ? numberList = [0] : numberList = numberList;
 
+  return callback(numberList.reduce((acc, currVal) => acc + currVal));
+}
 /**
  * ### Challenge `processProduct`
  * 
@@ -134,7 +135,7 @@ function processProduct(num1, num2, callback) {
  * should return "sad".
 */
 function processContains(item, list, callback) {
-  
+  return callback(list.includes(item));
 }
 
 /**
@@ -178,8 +179,8 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  return runners.forEach(firstName => `${firstName}`);
 }
 
 /**
