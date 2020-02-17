@@ -180,7 +180,9 @@ function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
 function getFullNames(runners) {
-  return runners.forEach(firstName => `${firstName}`);
+  const fullNames = [];
+  runners.forEach(element => fullNames.push(`${element.last_name}, ${element.first_name}`));
+  return fullNames;
 }
 
 /**
@@ -188,15 +190,16 @@ function getFullNames(runners) {
  * 
  * @instructions
  * The event director needs to have all the runners' first names 
- * in uppercase because the director BECAME DRUNK WITH POWER.
+ * in uppercase because the director BECAME DRUNK WITH POWER. <-- lol
  * Implement this function using map().
  * 
  * @param runners array of runners like the one inside the /data/runners.js file.
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+  const firstNames = runners.map(name => (`${name.first_name.toUpperCase()}`));
+  return firstNames;
 }
 
 /**
@@ -212,8 +215,8 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  
 }
 
 /**
