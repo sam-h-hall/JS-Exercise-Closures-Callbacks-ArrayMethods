@@ -157,8 +157,23 @@ function processContains(item, list, callback) {
  * [2] Invoking `processDuplicateFree` passing `[1,1,2,2,3]` and `(arr) => arr.length`,
  * should return 3.
 */
-function processDuplicateFree(/* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */) {
-  /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
+function processDuplicateFree(list, callback) {
+  const newList = list.filter((item, index) => list.indexOf(item) === index);
+  return callback(newList);
+
+  //was trying to use a for loop until I realized I could use filter
+  // newList.push(list[0]);
+
+  // for (let i = 0; i < list.length; i++) {
+  //   for (let j = 0; j < newList.length; j++) {
+  //     if (list[i] !== newList[j]) {
+  //       newList.push(list[i]);
+  //     } else {
+  //       break;
+  //     }
+  //   }
+  // }
+  // return callback(newList);
 }
 
 /////////////// HIGHER-ORDER ARRAY METHODS ///////////////
